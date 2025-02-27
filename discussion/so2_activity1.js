@@ -52,3 +52,33 @@ let editProduct = function () {
 };
 
 editProduct();
+
+// Emptying selected products
+let removeProduct = function () {
+  console.log("Selected index will become empty");
+  console.log("Select from 1 - 3");
+  var index = prompt("Enter the index");
+  var inner_array = prompt("Enter the index for inner array");
+  if (isNaN(index) || index == 0 || isNaN(inner_array) || inner_array == 0) {
+    console.log("Invalid index. Exiting....");
+    return;
+  } else {
+    --index;
+    --inner_array;
+    console.log(
+      "The following items will be remove: " +
+        products.name[index][inner_array],
+      products.price[index][inner_array],
+      products.stock[index][inner_array],
+      products.category[index][inner_array]
+    );
+    console.log("Done.. Displaying the products again");
+    products.name[index][inner_array] = undefined;
+    products.price[index][inner_array] = undefined;
+    products.stock[index][inner_array] = undefined;
+    products.category[index][inner_array] = undefined;
+    displayProduct();
+  }
+};
+
+removeProduct();
