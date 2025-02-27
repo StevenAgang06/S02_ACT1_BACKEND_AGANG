@@ -22,3 +22,15 @@ const products = {
 };
 
 // Displaying all products and its information
+
+let displayProduct = function () {
+  for (let iterator = 0; iterator < products.category.length; iterator++) {
+    console.log("Products Category: " + products.category[iterator]);
+    console.log("Products Name: " + products.name[iterator]);
+    console.log("Products Price: " + products.price[iterator]);
+    console.log("Products Stocks: " + products.stock[iterator]);
+    console.log("\n");
+  }
+};
+
+displayProduct();
