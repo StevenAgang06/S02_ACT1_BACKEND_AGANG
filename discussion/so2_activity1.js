@@ -34,3 +34,21 @@ let displayProduct = function () {
 };
 
 displayProduct();
+
+// Editing pre-defined product
+
+let editProduct = function () {
+  console.log("Editing this item...");
+  console.log("Category: " + products.category[0]);
+  console.log("Product Name: " + products.name[0]);
+  console.log("Product Price: " + products.price[0]);
+  console.log("Product Stocks: " + products.stock[0]);
+
+  products.name[0] = ["FUBU", "JORDAN", "CLARKS"];
+  products.price[0] = [100, 50, 25];
+  products.stock[0] = [100, 100, 100];
+  console.log("Done.. Displaying the products again... \n \n");
+  displayProduct();
+};
+
+editProduct();
