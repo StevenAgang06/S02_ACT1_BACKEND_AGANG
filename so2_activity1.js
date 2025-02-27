@@ -25,10 +25,10 @@ const products = {
 
 let displayProduct = function () {
   for (let iterator = 0; iterator < products.category.length; iterator++) {
-    console.log("Products Category: " + products.category[iterator]);
-    console.log("Products Name: " + products.name[iterator]);
-    console.log("Products Price: " + products.price[iterator]);
-    console.log("Products Stocks: " + products.stock[iterator]);
+    console.log(`Products Category: ${products.category[iterator]}`);
+    console.log(`Products Name: ${products.name[iterator]}`);
+    console.log(`Products Price: ${products.price[iterator]}`);
+    console.log(`Products Stocks: ${products.stock[iterator]}`);
     console.log("\n");
   }
 };
@@ -39,10 +39,10 @@ displayProduct();
 
 let editProduct = function () {
   console.log("Editing this item...");
-  console.log("Category: " + products.category[0]);
-  console.log("Product Name: " + products.name[0]);
-  console.log("Product Price: " + products.price[0]);
-  console.log("Product Stocks: " + products.stock[0]);
+  console.log(`Category: ${products.category[0]}`);
+  console.log(`Product Name: ${products.name[0]}`);
+  console.log(`Product Price: ${products.price[0]}`);
+  console.log(`Product Stocks: ${products.stock[0]}`);
 
   products.name[0] = ["FUBU", "JORDAN", "CLARKS"];
   products.price[0] = [100, 50, 25];
